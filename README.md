@@ -2,9 +2,9 @@
 
 This is a set of examples showing how to write parallelized code using OpenCL. All examples are in C++ and use the official OpenCL C++ wrapper (cl.hpp), which makes the code more concise and readable. Examples use OpenCL 1.2 for better portability.
 
-## Code Example
+## Examples
 
-TODO
+add_vectors - Starting point for learning OpenCL; just adding two vectors
 
 ## Motivation
 

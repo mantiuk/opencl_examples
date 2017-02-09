@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 2.8.11)
-project (opencl_vector_add)
+project (list_platforms)
 
 find_package (OpenCL)
 if( NOT OpenCL_FOUND )
@@ -8,6 +8,6 @@ endif( NOT OpenCL_FOUND )
 
 include_directories ("${PROJECT_SOURCE_DIR}/../include" ${OpenCL_INCLUDE_DIRS})
 
-add_executable(vector_add vector_add.cpp)
-target_link_libraries(vector_add ${OpenCL_LIBRARIES})
+add_subdirectory (vector_add) 
+add_subdirectory (list_platforms) 
 

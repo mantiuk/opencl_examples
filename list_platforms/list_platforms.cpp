@@ -58,8 +58,14 @@ int main(){
                         break;
                       }
                       std::cout << std::endl;
+                      std::cout << "    Version: " << device.getInfo<CL_DEVICE_VERSION>() << std::endl;
                       std::cout << "    Global memory: " << device.getInfo<CL_DEVICE_GLOBAL_MEM_SIZE>() << " bytes" << std::endl;
                       std::cout << "    Local memory: " << device.getInfo<CL_DEVICE_LOCAL_MEM_SIZE>() << " bytes" << std::endl;
+                      std::cout << "    Max compute units: " << device.getInfo<CL_DEVICE_MAX_COMPUTE_UNITS>() << std::endl;
+                      std::cout << "    Max work group size: " << device.getInfo<CL_DEVICE_MAX_WORK_GROUP_SIZE>() << std::endl;
+
+
+
                       
                     }
                     

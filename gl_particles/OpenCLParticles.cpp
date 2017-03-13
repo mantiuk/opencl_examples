@@ -139,7 +139,7 @@ public:
 			0      // terminator
 		};
 #else
-		cl_context_properties props[] =
+		cl_context_properties properties[] =
 		{
 			CL_GL_CONTEXT_KHR,
 			(cl_context_properties)glXGetCurrentContext(),
@@ -259,7 +259,7 @@ public:
 		mouse_x = ((float)x / (float)getWidth()) * 2. - 1.;
 		mouse_y = 1. - ((float)y / (float)getHeight()) * 2.;
 
-		printf("x = %g, y = %g\n", mouse_x, mouse_y );
+		//printf("x = %g, y = %g\n", mouse_x, mouse_y );
 	}
 };
 

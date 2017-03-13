@@ -41,7 +41,7 @@ https://cmake.org/
 
 * GLM: http://glm.g-truc.net/
 
-On Linux the libraries can be easily installed from packages. Remember to install the development version of the packages. 
+On Linux the libraries can be easily installed from packages. Remember to install the development version of the packages (libglut-dev, libglew-dev, libglm-dev). 
 
 On Windows the libraries needs to be manually installed and then the path specified for each library in CMake. 
 

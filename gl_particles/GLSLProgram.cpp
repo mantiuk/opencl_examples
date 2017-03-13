@@ -99,7 +99,7 @@ void GLSLProgram::loadProgram(const std::string& fileName)
 			GLuint	shader = glCreateShader(info[kk].type);
 
 			const char* srcs[] = { source.c_str() };
-			int lens[] = { source.length() };
+			int lens[] = { (int)source.length() };
 			glShaderSource(shader, 1, srcs, lens);
 			glCompileShader(shader);
 

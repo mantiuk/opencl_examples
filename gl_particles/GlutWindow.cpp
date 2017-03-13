@@ -5,14 +5,9 @@
 #include	<map>
 #include	<GL/glew.h>
 
-#ifdef	_WIN32
-	#include	<GL/wglew.h>
-#else
-	#include	<GL/glxew.h>
-#endif
-
-#include	"GlutWindow.h"
-#include	<stdio.h>
+#include "GlutWindow.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 #ifndef GLUT_WHEEL_UP_BUTTON
 #define GLUT_WHEEL_UP_BUTTON 0x0003
@@ -139,7 +134,7 @@ GlutWindow::GlutWindow ( int xo, int yo, int w, int h, const char * theCaption )
     glutKeyboardUpFunc    ( keyReleasedFunc        );
     glutSpecialFunc       ( specialKeyFunc         );
     glutSpecialUpFunc     ( specialKeyReleasedFunc );
-	glutMouseWheelFunc    ( wheelFunc   );
+    //    	glutMouseWheelFunc    ( wheelFunc   );
 //    glutIgnoreKeyRepeat   ( 1 );
 	setTime               ();
 
@@ -159,7 +154,7 @@ GlutWindow::~GlutWindow ()
 {
 
     glutDestroyWindow ( id );
-    glutLeaveMainLoop ();
+    //    glutLeaveMainLoop ();
 
     windows.erase( id );
 }
@@ -168,9 +163,9 @@ void	GlutWindow :: init ( int& argc, char ** argv, int major, int minor, int mod
 {
     glutInit               ( &argc, argv );
     glutInitDisplayMode    ( mode );
-    glutInitContextVersion ( major, minor );
-    glutInitContextProfile ( GLUT_CORE_PROFILE );
-    glutInitContextFlags   ( GLUT_FORWARD_COMPATIBLE | (debug ? GLUT_DEBUG : 0 ) );
+    //    glutInitContextVersion ( major, minor );
+    //glutInitContextProfile ( GLUT_CORE_PROFILE );
+    //glutInitContextFlags   ( GLUT_FORWARD_COMPATIBLE | (debug ? GLUT_DEBUG : 0 ) );
 
     glewExperimental = GL_TRUE;
     glewInit ();

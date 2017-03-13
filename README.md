@@ -45,7 +45,7 @@ On Linux the libraries can be easily installed from packages. Remember to instal
 
 On Windows the libraries needs to be manually installed and then the path specified for each library in CMake. 
 
-On Mac you can use brew (https://brew.sh/) to install the missing libraries. 
+The OpenGL example currently does not work on OSX.
 
 ## Running
 

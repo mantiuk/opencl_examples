@@ -14,8 +14,15 @@
  * (c) 2017 Rafal K. Mantiuk
 */
 
-#include	<CL/cl.h>
-#include	<CL/cl_gl.h>
+#include <gl/glew.h>
+
+#if __APPLE__
+  #include <OpenCL/opencl.h>
+  #include <OpenCL/cl_gl.h>
+#else
+  #include <CL/opencl.h>
+  #include <CL/cl_gl.h>
+#endif
 
 #include "GlutWindow.h"
 #include "GLSLProgram.h"
@@ -138,6 +145,15 @@ public:
 			(cl_context_properties)(platforms[use_platform])(),
 			0      // terminator
 		};
+#elif __APPLE__
+		cl_context_properties properties[] =
+		{
+			CL_CONTEXT_PLATFORM,
+			(cl_context_properties)(platforms[use_platform])(),
+			0      // terminator
+		};
+		//	#error "TODO: setup shared OpenGL / OpenCL rendering context on Mac"
+
 #else
 		cl_context_properties properties[] =
 		{

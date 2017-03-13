@@ -7,14 +7,22 @@
 
 #include	<GL/glew.h>
 
-#ifdef	_WIN32
+#ifdef _WIN32
 	#include	<GL/wglew.h>
+#elif __APPLE__
+//
 #else
 	#include	<GL/glxew.h>
 #endif
 
 #include	<string>
-#include	<GL/freeglut.h>
+#if __APPLE__
+  #include	<glut.h>
+#else
+  #include	<GL/freeglut.h>
+#endif
+
+#include <stdlib.h>
 
 using namespace std;
 

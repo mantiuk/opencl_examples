@@ -23,6 +23,13 @@ You need to install OpenCL SDK for your platform. Only xcode is required on Mac.
 * For Nvidia, OpenCL SDK is confusingly bundled with CUDA Toolkit
 https://developer.nvidia.com/cuda-downloads 
 
+On Ubuntu (tested on 18.04/bionic) is possible to install the required files from packages:
+
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update
+sudo apt-get install nvidia-cuda-toolkit
+
+
 * Intel: 
 https://software.intel.com/en-us/intel-opencl
 
@@ -41,7 +48,7 @@ https://cmake.org/
 
 * GLM: http://glm.g-truc.net/
 
-On Linux the libraries can be easily installed from packages. Remember to install the development version of the packages (libglut-dev, libglew-dev, libglm-dev). 
+On Linux the libraries can be easily installed from packages. Remember to install the development version of the packages (freeglut3-dev, libglew-dev, libglm-dev). 
 
 On Windows the libraries needs to be manually installed and then the path specified for each library in CMake. 
 

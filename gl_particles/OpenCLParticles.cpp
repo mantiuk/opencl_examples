@@ -14,7 +14,7 @@
  * (c) 2017 Rafal K. Mantiuk
 */
 
-#include <gl/glew.h>
+#include <GL/glew.h>
 
 #if __APPLE__
   #include <OpenCL/opencl.h>

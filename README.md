@@ -23,18 +23,20 @@ You need to install OpenCL SDK for your platform. Only xcode is required on Mac.
 * For Nvidia, OpenCL SDK is confusingly bundled with CUDA Toolkit
 https://developer.nvidia.com/cuda-downloads 
 
-On Ubuntu (tested on 18.04/bionic) is possible to install the required files from packages:
+On Ubuntu (tested on 18.04/bionic) it is possible to install the required files from packages:
 
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt-get update
 sudo apt-get install nvidia-cuda-toolkit
 
-
 * Intel: 
 https://software.intel.com/en-us/intel-opencl
 
 * AMD:
-http://developer.amd.com/tools-and-sdks/opencl-zone/amd-accelerated-parallel-processing-app-sdk/
+Linux: OpenCL ICD is bundled with AMD drivers. Get your card's driver from here: https://www.amd.com/en/support . The required headers can be installed using your package manager: sudo apt-get install opencl-headers
+
+Windows: AMD has dropped the support for APP SDK and such any related package might not available on developer.amd.com. You can instead use this light SDK package available here: https://github.com/GPUOpen-LibrariesAndSDKs/OCL-SDK/releases
+
 
 Use CMake to generate build files for your platform (VS, gnu, xcode, etc.)
 https://cmake.org/
